@@ -11,7 +11,7 @@ func main() {
 	// create a new logger
 	l := log.New(os.Stdout, "",  log.LstdFlags)
 	// create a new server
-	s := server.Router(*l)
+	s := server.Router(l)
 	
 	// start the server with the logger
 	if err := s.Serv.ListenAndServe(); err != nil{
